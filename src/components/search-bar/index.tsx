@@ -43,7 +43,7 @@ export default function SearchBar({sourcesData}: Props) {
   };
 
   return (
-    <div className="w-auto flex flex-col md:flex-row md:justify-between items-start md:items-center gap-3 p-2 mx-4 bg-gray-300 md:sticky top-0 z-10 shadow-md">
+    <div className="top-0 z-10 mx-4 flex w-auto flex-col items-start gap-3 bg-gray-300 p-2 shadow-md md:sticky md:flex-row md:items-center md:justify-between">
       <Input
         id="input-search"
         label="Search"
@@ -51,7 +51,7 @@ export default function SearchBar({sourcesData}: Props) {
         value={searchValue}
         onChange={searchChangeHandler}
       />
-      <div className="flex flex-col sm:flex-row gap-3">
+      <div className="flex flex-col gap-3 sm:w-full sm:flex-row sm:justify-between sm:gap-6 md:w-auto">
         <Select
           id="selct-sources"
           label="Sources"

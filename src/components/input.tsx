@@ -6,7 +6,7 @@ type Props = InputHTMLAttributes<HTMLInputElement> & {
 
 export default function Input({label, id, ...otherProps}: Props) {
   return (
-    <div className="flex flex-col w-full md:w-auto">
+    <div className="flex w-full flex-col md:w-auto">
       {label ? (
         <label className="text-sm" htmlFor={id}>
           {label}

@@ -42,13 +42,13 @@ export default function ArticleDetails({title}: Props) {
   const imageSrc = isImageValid ? urlToImage! : plugSrc;
 
   return (
-    <div className="w-full flex flex-col gap-4 max-w-6xl self-center">
-      <div className="flex flex-col md:flex-row gap-4">
-        <div className="aspect-video md:w-96 relative">
+    <div className="flex w-full max-w-6xl flex-col gap-4 self-center">
+      <div className="flex flex-col gap-4 md:flex-row">
+        <div className="relative aspect-video md:w-96">
           <Image src={imageSrc} fill objectFit="cover" alt={title} />
         </div>
-        <div className="flex-grow flex flex-col gap-4 md:gap-0">
-          <h3 className="flex-grow font-bold text-2xl">{article.title}</h3>
+        <div className="flex flex-grow flex-col gap-4 md:gap-0">
+          <h3 className="flex-grow text-2xl font-bold">{article.title}</h3>
           <p className="self-end">{formatedDate}</p>
           <p className="self-end">{author}</p>
         </div>

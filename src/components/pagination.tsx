@@ -29,5 +29,5 @@ export default function Pagination({callback}: Props) {
     }
   }, []);
 
-  return <div className="absolute bottom-0 w-full h-[50vh]" ref={paginationRef} />;
+  return <div className="absolute bottom-0 h-[50vh] w-full" ref={paginationRef} />;
 }

@@ -14,13 +14,13 @@ export default function Item({title, urlToImage, publishedAt, author}: Props) {
   const imageSrc = isImageValid ? urlToImage! : plugSrc;
 
   return (
-    <div className="col-span-12 sm:col-span-6 h-full md:col-span-4 lg:col-span-3 sm:aspect-[4/5] w-full shadow-md flex flex-col gap-3 justify-between">
-      <div className="aspect-video w-full relative">
+    <div className="col-span-12 flex h-full w-full flex-col justify-between gap-3 shadow-md sm:col-span-6 sm:aspect-[4/5] md:col-span-4 lg:col-span-3">
+      <div className="relative aspect-video w-full">
         <Image src={imageSrc} fill objectFit="cover" alt={title} />
       </div>
-      <div className="flex-grow flex flex-col justify-between p-3 gap-3 break-words">
+      <div className="flex flex-grow flex-col justify-between gap-3 break-words p-3">
         <Link href={articleHref}>
-          <h3 className="hover:underline text-lg ">{title}</h3>
+          <h3 className="text-lg hover:underline ">{title}</h3>
         </Link>
         <p>{author}</p>
         <p>{formatedDate}</p>

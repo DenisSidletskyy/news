@@ -19,7 +19,7 @@ export default function RootLayout({children}: Props) {
       <body>
         <Providers>
           <Header />
-          <main className="p-4 flex-grow w-full flex flex-col gap-4">{children}</main>
+          <main className="flex w-full flex-grow flex-col gap-4 p-4">{children}</main>
         </Providers>
       </body>
     </html>

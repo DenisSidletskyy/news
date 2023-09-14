@@ -31,7 +31,7 @@ export default function NewsList({newsData}: Props) {
   const isPaginationEnabled = getIsPaginationEnabled(articles.length, totalResults);
 
   return (
-    <div className="m-auto grid grid-cols-12 gap-4 max-w-screen-2xl relative">
+    <div className="relative m-auto grid max-w-screen-2xl grid-cols-12 gap-4">
       {articles.map((article) => (
         <Item key={article.publishedAt} {...article} />
       ))}
